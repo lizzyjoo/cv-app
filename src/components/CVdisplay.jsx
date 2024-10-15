@@ -62,7 +62,7 @@ const dummyData = {
   projects: [
     {
       name: "HIREsuME",
-      link: "www.myportfolio.com",
+      link: "https://github.com/lizzyjoo/cv-app",
       descriptions: [
         "Developed a CV Builder application using React, enabling LaTeX-like-format resume generation based on user-inputted personal information",
       ],
