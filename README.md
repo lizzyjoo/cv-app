@@ -10,7 +10,7 @@ This project is part of The Odin Project (TOP) curriculum and serves as an intro
 
 ## Introduction
 
-In this project, users can input their personal information and create a clean, professional-looking résumé geared towards technical roles, but usable by anyone. It includes various sections such as personal details, education, and practical experience. You will be practicing core React concepts like components, state, and props while building this project.
+In this project, users can input their personal information and create a clean, professional-looking résumé geared towards technical roles, but usable by anyone. It includes various sections such as personal details, education, and practical experience.
 
 ## Features
 
