@@ -29,3 +29,7 @@ In this project, users can input their personal information and create a clean, 
 - **React**: A JavaScript library for building user interfaces.
 - **CSS**: For styling the components and creating a clean, LaTeX-like layout.
 - **JavaScript (ES6)**: For managing the logic and interactions within the app.
+
+## References
+
+- Used Jake Gutierrez's LaTex Resume format https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs
