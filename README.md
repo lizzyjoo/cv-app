@@ -7,10 +7,6 @@ This project is part of The Odin Project (TOP) curriculum and serves as an intro
 - [Introduction](#introduction)
 - [Features](#features)
 - [Technologies](#technologies)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Assignment](#assignment)
-- [Deployment](#deployment)
 
 ## Introduction
 
