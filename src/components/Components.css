@@ -1,0 +1,315 @@
+.resumeSection {
+  max-width: 250px;
+  margin: 40px auto;
+  text-align: center;
+  font-size: 15px;
+  color: rgb(247, 247, 247);
+}
+
+.expandSection {
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid #000;
+  box-sizing: border-box;
+  color: #000;
+  cursor: pointer;
+  display: inline-flex;
+  fill: #000;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  width: 250px;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: -0.8px;
+  line-height: 24px;
+  /* min-width: 180px; */
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.expandSection:focus {
+  color: #171e29;
+}
+
+.expandSection:hover {
+  border-color: #06f;
+  color: #06f;
+  fill: #06f;
+}
+
+.expandSection:active {
+  border-color: #06f;
+  color: #06f;
+  fill: #06f;
+}
+
+@media (min-width: 768px) {
+  .expandSection {
+    min-width: 170px;
+  }
+}
+
+.sectionTitle {
+  cursor: pointer;
+
+  margin: 0;
+}
+
+.sectionForm {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+.sectionForm input {
+  border: #000;
+  border-style: solid;
+  padding: 4px 8px 4px 8px;
+}
+/* CSS */
+.formSubmitBtn,
+.createForm {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px,
+    5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.formSubmitBtn:active,
+.createForm:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  .formSubmitBtn,
+  .createForm {
+    padding: 0.25em 0.75em;
+  }
+}
+
+.sectionForm label {
+  color: #000;
+  text-align: left;
+  font-weight: 500;
+}
+.sectionForm input,
+.sectionForm button {
+  margin: 10px 0;
+}
+
+.personalInfoContainer,
+.educationContainer,
+.projectsContainer,
+.employmentContainer,
+.skillsContainer,
+.relevantExperienceContainer {
+  background-color: #efefef;
+  padding: 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out 0.1s;
+  opacity: 0;
+}
+
+.skillsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.personalInfoContainer.visible,
+.educationContainer.visible,
+.projectsContainer.visible,
+.employmentContainer.visible,
+.skillsContainer.visible,
+.relevantExperienceContainer.visible {
+  max-height: 1000px; /* Adjust this value based on your content */
+  opacity: 1;
+}
+
+.educationEntry,
+.projectEntry,
+.employmentEntry,
+.categoryEntry {
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid black;
+  color: #000;
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+.categoryEntry {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+}
+
+.addCategoryDiv {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#categoriesForm {
+  padding: 0;
+}
+#skillCatInputField {
+  width: 75%;
+}
+#categoryRemoveBtn {
+  display: none;
+
+  position: relative;
+}
+.categoryEntry:hover #categoryRemoveBtn {
+  display: inline-block;
+}
+.expandSection::after {
+  content: "▼";
+  font-size: 15px;
+  display: inline-block;
+  margin-left: 50px;
+  transition: transform 0.3s ease-out;
+}
+
+.expandSection.expanded::after {
+  transform: rotate(180deg);
+}
+
+.educationEntry:hover,
+.projectEntry:hover,
+.employmentEntry:hover {
+  background-color: white;
+}
+
+.educationEntry p {
+  margin: 5px 0;
+}
+
+.projectEntry h3 {
+  margin-top: 0;
+}
+
+.projectEntry ul {
+  margin-bottom: 0;
+}
+
+.skillsAddDiv {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  justify-content: center;
+}
+
+.skill {
+  color: #000;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.categoryAddDiv {
+  flex-direction: column;
+  text-align: left;
+}
+#plusBtn {
+  border: none;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+.addDescBtn,
+.removeBtn {
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  margin: 0;
+}
+
+#skillRemoveBtn {
+  padding-left: 20px;
+}
+
+.addDescBtn:hover,
+.removeBtn :hover {
+  background-color: #dfdcdc;
+}
+.addCategoryBtn {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 1.5px solid;
+  padding: 5px 8px 5px 8px;
+  height: 100%;
+  /* box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px,
+    4px 4px 0px 0px; */
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.categoryLabel {
+  color: #000;
+  text-align: left;
+  font-weight: 500;
+}
+
+.skillCategoryDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+select {
+  border: solid#000;
+  margin: 10px;
+}
+
+.descriptionDiv {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+@keyframes expand {
+  0% {
+    max-height: 0;
+  }
+  100% {
+    max-height: 1000px; /* Adjust this value based on your form's height */
+  }
+}

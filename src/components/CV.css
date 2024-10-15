@@ -1,0 +1,220 @@
+@font-face {
+  font-family: "Serif-Roman"; /* Name of the font */
+  src: url("src/fonts/serif-roman.woff") format("woff"); /* Path to your WOFF file */
+  font-weight: normal; /* You can specify weights if needed */
+  font-style: normal; /* You can specify styles if needed */
+}
+@font-face {
+  font-family: "Serif-Bold"; /* Name of the font */
+  src: url("src/fonts/serif-bold.woff") format("woff"); /* Path to your WOFF file */
+  font-weight: normal; /* You can specify weights if needed */
+  font-style: normal; /* You can specify styles if needed */
+}
+@font-face {
+  font-family: "Serif-Oblique"; /* Name of the font */
+  src: url("src/fonts/serif-oblique.woff") format("woff"); /* Path to your WOFF file */
+  font-weight: normal; /* You can specify weights if needed */
+  font-style: normal; /* You can specify styles if needed */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+.pageHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1b1c1d;
+  color: white;
+  width: 100vw;
+  margin: 0 auto;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 50px;
+}
+
+.container {
+  display: flex;
+  gap: 24px;
+
+  width: 100%;
+  height: auto;
+  padding: 16px; /* Add padding to prevent content from touching the edges */
+}
+
+.editSection {
+  display: flex;
+  margin-top: 30px;
+  flex-direction: column;
+  flex-grow: 1; /* Allows this section to grow */
+  flex-shrink: 1; /* Allows this section to shrink */
+  min-width: 300px; /* Minimum width for the edit section */
+  max-width: 400px; /* Set a max width to prevent over-expansion */
+  overflow-y: auto; /* Allow scrolling */
+  height: auto; /* Make the height dynamic */
+}
+
+.previewSection {
+  display: flex;
+  flex-grow: 2; /* Allows this section to grow more */
+  flex-shrink: 1; /* Allows it to shrink when space is limited */
+  justify-content: right;
+}
+
+.resume {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.1),
+    0 8px 16px -8px rgba(0, 0, 0, 0.25); */
+  /* height: 29.7cm;
+  width: 21cm; */
+  max-width: 100%; /* Ensure it doesn’t exceed its container */
+  max-height: 100%; /* Same for height */
+  object-fit: contain; /* Scale the resume appropriately */
+}
+
+@media print {
+  body {
+    font-family: "Serif-Roman", serif; /* Use the custom font for print */
+  }
+}
+/* Resume things, not structural */
+#cv-content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  padding: 3em;
+  font-family: "Serif-Roman";
+  width: 8.5in;
+  height: 11in;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+#resumeHeader {
+  margin-bottom: 1em;
+}
+#resumeHeader p {
+  font-size: 14px;
+}
+.resumeName {
+  font-family: "Serif-Bold";
+}
+
+.sectionTitle {
+  font-size: 20px;
+}
+
+.resumeSectionTitle {
+  font-size: 14px;
+}
+.boldSection {
+  font-family: "Serif-Bold";
+  font-size: 14px;
+}
+.obliqueSection {
+  font-family: "Serif-Oblique";
+  font-size: 14px;
+}
+hr {
+  border: none;
+  border-top: 0.5px solid black; /* Change to your desired color */
+  margin-bottom: 4px;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+
+  color: #000;
+}
+.descList {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  justify-content: center;
+  padding-left: 20pt;
+}
+.descItem {
+  display: flex;
+  list-style-type: none;
+  position: relative;
+  font-size: 12px;
+}
+.descList li::before {
+  content: "•";
+  font-size: 10px;
+  padding-right: 5pt;
+  position: absolute;
+  left: -1.2em;
+}
+
+.resumeItem {
+  margin: 0.5em;
+}
+.skillsItem {
+  margin-left: 0.5em;
+  font-size: 14px;
+}
+
+.employmentLeft,
+.employmentRight {
+  display: flex;
+  flex-direction: column;
+}
+
+.employmentRight,
+.eduRight,
+.experienceRight {
+  text-align: right;
+  font-size: 14px;
+}
+
+#educationItem,
+.employmentHeading,
+.experienceHeading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.downloadBtnDiv {
+  display: flex;
+  justify-content: right;
+}
+#downloadBtn {
+  font-family: "Open Sans", sans-serif;
+  width: 40px;
+
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px,
+    5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#downloadBtn :active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  #downloadBtn {
+    padding: 0.25em 0.25em;
+  }
+}
