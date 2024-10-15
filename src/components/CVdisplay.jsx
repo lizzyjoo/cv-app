@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import DownloadPDF from "./DownloadPDF";
 import "./CV.css";
-import "katex/dist/katex.min.css";
 
 // Dummy data
 const dummyData = {
