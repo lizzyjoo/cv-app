@@ -1,20 +1,14 @@
 @font-face {
   font-family: "Serif-Roman"; /* Name of the font */
   src: url("src/fonts/serif-roman.woff") format("woff"); /* Path to your WOFF file */
-  font-weight: normal; /* You can specify weights if needed */
-  font-style: normal; /* You can specify styles if needed */
 }
 @font-face {
   font-family: "Serif-Bold"; /* Name of the font */
   src: url("src/fonts/serif-bold.woff") format("woff"); /* Path to your WOFF file */
-  font-weight: normal; /* You can specify weights if needed */
-  font-style: normal; /* You can specify styles if needed */
 }
 @font-face {
   font-family: "Serif-Oblique"; /* Name of the font */
   src: url("src/fonts/serif-oblique.woff") format("woff"); /* Path to your WOFF file */
-  font-weight: normal; /* You can specify weights if needed */
-  font-style: normal; /* You can specify styles if needed */
 }
 
 * {
